@@ -1,0 +1,27 @@
+version: "3"
+services:
+  blog_webserver:
+    image: nginx:alpine
+    container_name: "blog_webserver"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./:/var/www
+      - ./nginx/conf:/etc/nginx/conf.d/
+    networks:
+      - app-network
+
+  blog_php_app:
+    build:
+      context: .
+      dockerfile: php/Dockerfile
+    container_name: "blog_php_app"
+    volumes:
+      - ./:/var/www
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
