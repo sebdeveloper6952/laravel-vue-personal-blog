@@ -19589,7 +19589,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("h1", [_vm._v("Home")])])
+    return _c("div", [_c("h1", [_vm._v("Home Component")])])
   }
 ]
 render._withStripped = true
@@ -31905,8 +31905,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /var/www/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /var/www/resources/css/app.css */"./resources/css/app.css");
+__webpack_require__(/*! /home/node/app/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/node/app/resources/css/app.css */"./resources/css/app.css");
 
 
 /***/ })

@@ -22,6 +22,16 @@ services:
     networks:
       - app-network
 
+  blog_nodejs:
+    image: node:alpine
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=debug
+    volumes:
+      - ./:/home/node/app
+    command: npm run watch
+
 networks:
   app-network:
     driver: bridge
